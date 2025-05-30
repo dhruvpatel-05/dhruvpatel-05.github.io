@@ -1,10 +1,19 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Home() {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0)
@@ -60,12 +69,6 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 animate-fade-in-up delay-200">
             Mathematics of Computation Student at UCLA | Data Science & Analytics
           </p>
-          <Link 
-            href="#projects"
-            className="inline-block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg hover:from-purple-600 hover:via-blue-600 hover:to-purple-600 transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-xl font-medium animate-fade-in-up delay-300"
-          >
-            View Projects
-          </Link>
         </div>
       </section>
 
@@ -82,7 +85,7 @@ export default function Home() {
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 Currently pursuing my B.S. in Mathematics of Computation with a 3.80 GPA,
-                I'm actively involved in data science projects and research while maintaining
+                I'm actively involved in data science projects and clubs while maintaining
                 academic excellence as a UCLA Dean's Honors List recipient.
               </p>
             </div>
@@ -182,35 +185,35 @@ export default function Home() {
       <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-fade-in-up">Get in Touch</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <a
-                href="https://github.com/dhruvpatel97"
+                href="https://github.com/dhruvpatel-05"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-10 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in flex flex-col items-center justify-center min-w-[280px]"
                 style={{ animationDelay: '100ms' }}
               >
-                <div className="text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400">GitHub</div>
-                <p className="text-gray-600 dark:text-gray-300">@dhruvpatel97</p>
+                <div className="text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400 text-center w-full">GitHub</div>
+                <p className="text-gray-600 dark:text-gray-300 text-center">@dhruvpatel-05</p>
               </a>
               <a
-                href="https://linkedin.com/in/dhruvpatel97"
+                href="https://linkedin.com/in/dhruvpatel2005"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-10 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in flex flex-col items-center justify-center min-w-[280px]"
                 style={{ animationDelay: '200ms' }}
               >
-                <div className="text-2xl font-bold mb-3 text-purple-600 dark:text-purple-400">LinkedIn</div>
-                <p className="text-gray-600 dark:text-gray-300">@dhruvpatel97</p>
+                <div className="text-2xl font-bold mb-3 text-purple-600 dark:text-purple-400 text-center w-full">LinkedIn</div>
+                <p className="text-gray-600 dark:text-gray-300 text-center">@dhruvpatel2005</p>
               </a>
               <a
                 href="mailto:dhruvpatel97@g.ucla.edu"
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-10 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-scale-in flex flex-col items-center justify-center min-w-[280px]"
                 style={{ animationDelay: '300ms' }}
               >
-                <div className="text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400">Email</div>
-                <p className="text-gray-600 dark:text-gray-300">dhruvpatel97@g.ucla.edu</p>
+                <div className="text-2xl font-bold mb-3 text-blue-600 dark:text-blue-400 text-center w-full">Email</div>
+                <p className="text-gray-600 dark:text-gray-300 text-center">dhruvpatel97@g.ucla.edu</p>
               </a>
             </div>
           </div>
