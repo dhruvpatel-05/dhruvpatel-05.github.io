@@ -8,9 +8,9 @@
   --border:  #1c1c2e;
   --accent:  #f97316;
   --adim:    rgba(249, 115, 22, 0.08);
-  --text:    #e4e4f0;
-  --muted:   #737390;
-  --faint:   #32324a;
+  --text:    #eaeaf4;
+  --muted:   #9898b8;
+  --faint:   #52526e;
   --green:   #4ade80;
   --nav-h:   58px;
   --t:       0.18s ease;
@@ -253,7 +253,7 @@ strong { font-weight: 600; }
   letter-spacing: -0.05em;
   font-weight: 900;
   margin-bottom: 2.5rem;
-  font-size: clamp(5rem, 17vw, 14rem);
+  font-size: clamp(4rem, 13vw, 10.5rem);
   opacity: 0;
   animation: fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards 0.15s;
 }
@@ -350,10 +350,10 @@ strong { font-weight: 600; }
   margin-bottom: 1.25rem;
 }
 .about-main p:not(.about-lead) {
-  font-size: 0.93rem;
+  font-size: 0.975rem;
   color: var(--muted);
   margin-bottom: 0.85rem;
-  line-height: 1.75;
+  line-height: 1.78;
 }
 .about-main p:last-child { margin-bottom: 0; }
 
@@ -467,18 +467,19 @@ strong { font-weight: 600; }
 
 .ep-bullets { display: flex; flex-direction: column; gap: 0.6rem; }
 .ep-bullets li {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   color: var(--muted);
   padding-left: 1.25rem;
   position: relative;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 .ep-bullets li::before {
-  content: '—';
+  content: '/';
   position: absolute;
   left: 0;
   color: var(--accent);
   font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* ── Projects ────────────────────────────────────────────────────────────── */
@@ -529,9 +530,9 @@ strong { font-weight: 600; }
   margin-bottom: 0.85rem;
 }
 .pr-desc {
-  font-size: 0.875rem;
+  font-size: 0.925rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.72;
   max-width: 620px;
 }
 
@@ -698,8 +699,8 @@ footer a:hover { color: var(--accent); }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 0.65rem 0.5rem; font-size: 0.9rem; }
 
-  .hero-name { font-size: clamp(4rem, 20vw, 7rem); }
-  .hn-2 { padding-left: clamp(1.5rem, 5vw, 3rem); }
+  .hero-name { font-size: clamp(3.5rem, 17vw, 6rem); }
+  .hn-2 { padding-left: clamp(1.25rem, 4vw, 2.5rem); }
 
   .proj-row { grid-template-columns: 1fr; gap: 1rem; }
   .pr-num { font-size: 2rem; }
