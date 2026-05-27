@@ -5,7 +5,7 @@
   --bg:      #09090f;
   --bg-alt:  #0d0d16;
   --surface: #111120;
-  --border:  #1c1c2e;
+  --border:  #21213a;
   --accent:  #f97316;
   --adim:    rgba(249, 115, 22, 0.08);
   --text:    #eaeaf4;
@@ -48,7 +48,7 @@ strong { font-weight: 600; }
 
 /* ── Container / Section ──────────────────────────────────────────────────── */
 .container { max-width: var(--container); margin: 0 auto; padding: 0 2rem; }
-.section { padding: 6rem 0; }
+.section { padding: 5.5rem 0; }
 
 .section-alt {
   /* Mutes the dot grid a bit in alt sections */
@@ -342,12 +342,12 @@ strong { font-weight: 600; }
   align-items: start;
 }
 .about-lead {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--text);
   line-height: 1.4;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
 }
 .about-main p:not(.about-lead) {
   font-size: 0.975rem;
@@ -373,7 +373,7 @@ strong { font-weight: 600; }
   color: var(--accent);
   margin-bottom: 0.25rem;
 }
-.sf-block span:not(.sf-key) { font-size: 0.8rem; color: var(--muted); }
+.sf-block span:not(.sf-key) { font-size: 0.86rem; color: var(--muted); }
 
 /* ── Experience tabs ─────────────────────────────────────────────────────── */
 .exp-layout {
@@ -419,8 +419,7 @@ strong { font-weight: 600; }
 }
 .et-body { display: flex; flex-direction: column; gap: 0.1rem; }
 .et-co   { font-size: 0.83rem; font-weight: 600; }
-.et-role { font-size: 0.72rem; color: var(--faint); }
-.exp-tab.active .et-role { color: var(--muted); }
+.et-role { font-size: 0.72rem; color: var(--muted); }
 
 .exp-panels { padding: 2rem 2rem 2rem 2.25rem; min-height: 280px; }
 
@@ -448,7 +447,7 @@ strong { font-weight: 600; }
 }
 .ep-meta span {
   font-size: 0.76rem;
-  color: var(--faint);
+  color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
 }
 .ep-badge {
@@ -516,7 +515,7 @@ strong { font-weight: 600; }
   padding: 2px 7px;
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--border);
-  color: var(--faint);
+  color: var(--muted);
   font-family: 'JetBrains Mono', monospace;
   border-radius: 3px;
 }
@@ -590,7 +589,7 @@ strong { font-weight: 600; }
 .edu-date {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.76rem;
-  color: var(--faint);
+  color: var(--muted);
   margin: 0.3rem 0 1.5rem;
 }
 .edu-rows { display: flex; flex-direction: column; gap: 1.25rem; }
