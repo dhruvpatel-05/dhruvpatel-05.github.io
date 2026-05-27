@@ -56,9 +56,8 @@ export default function Home() {
                 to solve real-world problems and create meaningful impact.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                Currently pursuing my B.S. in Mathematics of Computation with a 3.80 GPA,
-                I'm actively involved in data science projects and clubs while maintaining
-                academic excellence as a UCLA Dean's Honors List recipient.
+                Currently pursuing my B.S. in Mathematics of Computation, I'm actively involved in data science clubs and research while maintaining
+                academic excellence as a multiple time UCLA Dean's Honors List recipient.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-6 animate-slide-in-right">
@@ -66,13 +65,14 @@ export default function Home() {
                 <h3 className="font-bold mb-4 text-blue-600 dark:text-blue-400 text-lg">Education</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">B.S. Mathematics of Computation</p>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">UCLA (2023-2027)</p>
-                <p className="text-gray-600 dark:text-gray-300">GPA: 3.80/4.00</p>
+                <p className="text-gray-600 dark:text-gray-300">GPA: 3.81/4.00</p>
               </div>
               <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                 <h3 className="font-bold mb-4 text-purple-600 dark:text-purple-400 text-lg">Experience</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">UCLA Tennis Consulting Scout</p>
-                <p className="text-gray-600 dark:text-gray-300 mb-2">Data Journalist</p>
-                <p className="text-gray-600 dark:text-gray-300">Junior Software Quality Engineer</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-2">FP&A Analyst Intern</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-2">Undergraduate Research Assistant</p>
+                <p className="text-gray-600 dark:text-gray-300">UCLA Tennis Scout</p>
+                <p className="text-gray-600 dark:text-gray-300">Data Journalist</p>
               </div>
             </div>
           </div>
