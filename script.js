@@ -1,16 +1,15 @@
-/* ── Scroll progress bar ─────────────────────────────────────────────── */
+/* ── Progress bar ─────────────────────────────────────────────────────── */
 const progressBar = document.getElementById('progress-bar');
 function updateProgress() {
-  const scrolled = window.scrollY;
-  const total    = document.documentElement.scrollHeight - window.innerHeight;
-  progressBar.style.width = `${(scrolled / total) * 100}%`;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = `${(window.scrollY / total) * 100}%`;
 }
 window.addEventListener('scroll', updateProgress, { passive: true });
 
-/* ── Navbar shadow on scroll ─────────────────────────────────────────── */
+/* ── Navbar border on scroll ─────────────────────────────────────────── */
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 10);
+  navbar.classList.toggle('scrolled', window.scrollY > 8);
 }, { passive: true });
 
 /* ── Mobile hamburger ─────────────────────────────────────────────────── */
@@ -19,50 +18,90 @@ const navLinks  = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
 
-/* ── Active nav link on scroll ────────────────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const links    = document.querySelectorAll('.nav-links a');
-const navObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      links.forEach(l => l.classList.remove('active'));
-      const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
-      if (a) a.classList.add('active');
-    }
-  });
+/* ── Active nav + side dot on scroll ─────────────────────────────────── */
+const sections  = document.querySelectorAll('section[id]');
+const navAs     = document.querySelectorAll('.nav-links a');
+const sdots     = document.querySelectorAll('.sdot');
+
+function setActive(id) {
+  navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));
+  sdots.forEach(d => d.classList.toggle('active', d.getAttribute('href') === `#${id}`));
+}
+
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
 }, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => navObserver.observe(s));
+sections.forEach(s => sectionObserver.observe(s));
 
 /* ── Scroll reveal ────────────────────────────────────────────────────── */
-const revealObserver = new IntersectionObserver(entries => {
+/* Uses animation (not transition) so .exp-item hover transition can't conflict */
+const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      revealObs.unobserve(e.target);
+    }
   });
-}, { threshold: 0.08 });
+}, { threshold: 0.07 });
+
 document.querySelectorAll('.reveal').forEach((el, i) => {
-  el.style.transitionDelay = `${(i % 5) * 0.06}s`;
-  revealObserver.observe(el);
+  el.style.animationDelay = `${(i % 4) * 0.07}s`;
+  revealObs.observe(el);
 });
 
-/* ── Hero canvas: particle network ───────────────────────────────────── */
-(function initCanvas() {
+/* ── Experience tab switcher ──────────────────────────────────────────── */
+const tabs   = document.querySelectorAll('.exp-tab');
+const panels = document.querySelectorAll('.exp-panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const idx = Number(tab.dataset.idx);
+    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+    panels[idx].classList.add('active');
+  });
+});
+
+/* Keyboard arrow navigation for tabs */
+tabs.forEach((tab, i) => {
+  tab.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+      e.preventDefault();
+      tabs[(i + 1) % tabs.length].focus();
+      tabs[(i + 1) % tabs.length].click();
+    }
+    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      tabs[(i - 1 + tabs.length) % tabs.length].focus();
+      tabs[(i - 1 + tabs.length) % tabs.length].click();
+    }
+  });
+});
+
+/* ── Hero canvas: particle network (orange) ───────────────────────────── */
+(function () {
   const canvas = document.getElementById('hero-canvas');
   const ctx    = canvas.getContext('2d');
 
   function resize() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
   }
   resize();
-  window.addEventListener('resize', resize, { passive: true });
 
-  const N    = Math.min(65, Math.floor((window.innerWidth * window.innerHeight) / 18000));
-  const DIST = 155;
+  const resizeObs = new ResizeObserver(resize);
+  resizeObs.observe(canvas.parentElement);
+
+  const N    = Math.min(70, Math.floor((window.innerWidth * window.innerHeight) / 15000));
+  const DIST = 145;
+
   const nodes = Array.from({ length: N }, () => ({
     x:  Math.random() * canvas.width,
     y:  Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.38,
-    vy: (Math.random() - 0.5) * 0.38,
+    vx: (Math.random() - 0.5) * 0.32,
+    vy: (Math.random() - 0.5) * 0.32,
   }));
 
   let rafId;
@@ -76,11 +115,12 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
         const dy   = nodes[i].y - nodes[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < DIST) {
+          const a = 0.1 * (1 - dist / DIST);
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(108,143,255,${0.13 * (1 - dist / DIST)})`;
-          ctx.lineWidth   = 0.7;
+          ctx.strokeStyle = `rgba(249,115,22,${a})`;
+          ctx.lineWidth   = 0.6;
           ctx.stroke();
         }
       }
@@ -88,8 +128,8 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 
     for (let i = 0; i < N; i++) {
       ctx.beginPath();
-      ctx.arc(nodes[i].x, nodes[i].y, 1.6, 0, Math.PI * 2);
-      ctx.fillStyle = 'rgba(108,143,255,0.45)';
+      ctx.arc(nodes[i].x, nodes[i].y, 1.5, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(249,115,22,0.5)';
       ctx.fill();
 
       nodes[i].x += nodes[i].vx;

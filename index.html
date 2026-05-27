@@ -7,13 +7,24 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <div id="progress-bar"></div>
 
-  <!-- NAV -->
+  <!-- Side section dots -->
+  <nav id="sdots" aria-label="Section navigation">
+    <a href="#hero"       class="sdot" data-label="Home"></a>
+    <a href="#about"      class="sdot" data-label="About"></a>
+    <a href="#experience" class="sdot" data-label="Experience"></a>
+    <a href="#projects"   class="sdot" data-label="Projects"></a>
+    <a href="#skills"     class="sdot" data-label="Skills"></a>
+    <a href="#education"  class="sdot" data-label="Education"></a>
+    <a href="#contact"    class="sdot" data-label="Contact"></a>
+  </nav>
+
+  <!-- Top nav -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">DP</a>
@@ -31,68 +42,100 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ── HERO ────────────────────────────────────────────────── -->
   <section id="hero">
     <canvas id="hero-canvas"></canvas>
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-name-block">
-          <span>Dhruv</span>
-          <span>Patel</span>
-        </div>
+
+    <div class="hero-wrap">
+      <h1 class="hero-name">
+        <span class="hn-1">Dhruv</span>
+        <span class="hn-2">Patel</span>
+      </h1>
+      <div class="hero-info">
+        <p>Math of Computation &nbsp;<span class="at">@</span>&nbsp; UCLA</p>
+        <p>Quant Research &nbsp;·&nbsp; AI Engineering</p>
+        <p class="hero-loc">Los Angeles, CA</p>
       </div>
-      <div class="hero-vdivider"></div>
-      <div class="hero-right">
-        <div class="hero-descriptor">
-          <p>Math of Computation @ UCLA</p>
-          <p>Quant Research &nbsp;·&nbsp; AI Engineering</p>
-          <p class="hero-location">Los Angeles, CA</p>
-        </div>
-        <div class="hero-links">
-          <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener" class="btn btn-outline">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            GitHub
-          </a>
-          <a href="https://www.linkedin.com/in/dhruvpatel-05" target="_blank" rel="noopener" class="btn btn-outline">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
-          </a>
-          <a href="mailto:dhruvpatel97@g.ucla.edu" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Get in Touch
-          </a>
-        </div>
+      <div class="hero-links">
+        <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/dhruvpatel-05" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:dhruvpatel97@g.ucla.edu" class="btn btn-accent">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+
+    <!-- Scrolling keyword ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Python</span><span class="td">◆</span>
+        <span>PyTorch</span><span class="td">◆</span>
+        <span>Machine Learning</span><span class="td">◆</span>
+        <span>Quantitative Finance</span><span class="td">◆</span>
+        <span>Hidden Markov Models</span><span class="td">◆</span>
+        <span>NumPy</span><span class="td">◆</span>
+        <span>LLM Agents</span><span class="td">◆</span>
+        <span>Scikit-Learn</span><span class="td">◆</span>
+        <span>Signal Processing</span><span class="td">◆</span>
+        <span>Snowflake</span><span class="td">◆</span>
+        <span>Transformers</span><span class="td">◆</span>
+        <span>Deep Learning</span><span class="td">◆</span>
+        <span>Time Series</span><span class="td">◆</span>
+        <span>SQL</span><span class="td">◆</span>
+        <span>Causal Inference</span><span class="td">◆</span>
+        <!-- duplicate for seamless loop -->
+        <span>Python</span><span class="td">◆</span>
+        <span>PyTorch</span><span class="td">◆</span>
+        <span>Machine Learning</span><span class="td">◆</span>
+        <span>Quantitative Finance</span><span class="td">◆</span>
+        <span>Hidden Markov Models</span><span class="td">◆</span>
+        <span>NumPy</span><span class="td">◆</span>
+        <span>LLM Agents</span><span class="td">◆</span>
+        <span>Scikit-Learn</span><span class="td">◆</span>
+        <span>Signal Processing</span><span class="td">◆</span>
+        <span>Snowflake</span><span class="td">◆</span>
+        <span>Transformers</span><span class="td">◆</span>
+        <span>Deep Learning</span><span class="td">◆</span>
+        <span>Time Series</span><span class="td">◆</span>
+        <span>SQL</span><span class="td">◆</span>
+        <span>Causal Inference</span><span class="td">◆</span>
+      </div>
     </div>
   </section>
 
-  <!-- ABOUT -->
+  <!-- ── ABOUT ────────────────────────────────────────────────── -->
   <section id="about" class="section">
     <div class="container">
-      <div class="about-layout">
-        <div class="about-eyebrow">About</div>
-        <div class="about-body">
+      <div class="s-head">
+        <span class="s-num">01</span>
+        <h2 class="s-title">About</h2>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-main">
           <p class="about-lead">I build systems that surface insight from messy, real-world data.</p>
           <p>I'm a Mathematics of Computation student at UCLA (graduating June 2027) with a minor in Data Science Engineering and a 3.75 GPA. My work lives at the intersection of machine learning, quantitative finance, and AI engineering — from fitting Hidden Markov Models on NBA play-by-play data to shipping production LLM agents at a sales company.</p>
           <p>Currently doing quant research under Prof. Mihai Cucuringu at the UCLA Mathematical &amp; Statistical Finance Group, and AI engineering at Smart Circle International. This summer I'll be joining Pacific Life as a Data Analytics Intern.</p>
           <p>When I'm not at a keyboard: poker, Rubik's cubes, or intramural basketball.</p>
         </div>
-        <div class="about-now">
-          <div class="now-block">
-            <span class="now-label">Now</span>
+        <div class="about-side">
+          <div class="sf-block">
+            <span class="sf-key">Now</span>
             <span>Quant Research @ UCLA MSFO</span>
-            <span>AI Engineering @ Smart Circle</span>
+            <span>AI Eng @ Smart Circle</span>
           </div>
-          <div class="now-block">
-            <span class="now-label">Next</span>
+          <div class="sf-block">
+            <span class="sf-key">Next</span>
             <span>Pacific Life · Summer 2026</span>
           </div>
-          <div class="now-block">
-            <span class="now-label">Studying</span>
+          <div class="sf-block">
+            <span class="sf-key">Studying</span>
             <span>UCLA · Math of Computation</span>
             <span>Expected June 2027</span>
           </div>
@@ -101,207 +144,266 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- ── EXPERIENCE ───────────────────────────────────────────── -->
   <section id="experience" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="exp-list">
+      <div class="s-head">
+        <span class="s-num">02</span>
+        <h2 class="s-title">Experience</h2>
+      </div>
+      <div class="exp-layout">
+        <div class="exp-tabs" role="tablist">
 
-        <div class="exp-item reveal">
-          <div class="exp-index">01</div>
-          <div class="exp-content">
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <h3 class="exp-title">Data Analytics Intern</h3>
-                <span class="job-tag upcoming">Incoming</span>
-              </div>
-              <div class="exp-meta">
-                <span class="exp-company">Pacific Life</span>
-                <span class="exp-date">June – Sep. 2026 &nbsp;·&nbsp; Newport Beach, CA</span>
-              </div>
-            </div>
-          </div>
+          <button class="exp-tab active" data-idx="0" role="tab" aria-selected="true">
+            <span class="et-num">01</span>
+            <span class="et-body">
+              <span class="et-co">Pacific Life</span>
+              <span class="et-role">Data Analytics</span>
+            </span>
+          </button>
+
+          <button class="exp-tab" data-idx="1" role="tab">
+            <span class="et-num">02</span>
+            <span class="et-body">
+              <span class="et-co">Smart Circle</span>
+              <span class="et-role">AI Engineering</span>
+            </span>
+          </button>
+
+          <button class="exp-tab" data-idx="2" role="tab">
+            <span class="et-num">03</span>
+            <span class="et-body">
+              <span class="et-co">UCLA MSFO</span>
+              <span class="et-role">Quant Research</span>
+            </span>
+          </button>
+
+          <button class="exp-tab" data-idx="3" role="tab">
+            <span class="et-num">04</span>
+            <span class="et-body">
+              <span class="et-co">Smart Circle</span>
+              <span class="et-role">Analytics</span>
+            </span>
+          </button>
+
+          <button class="exp-tab" data-idx="4" role="tab">
+            <span class="et-num">05</span>
+            <span class="et-body">
+              <span class="et-co">Bruin Tennis</span>
+              <span class="et-role">Data & Scouting</span>
+            </span>
+          </button>
+
         </div>
 
-        <div class="exp-item reveal">
-          <div class="exp-index">02</div>
-          <div class="exp-content">
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <h3 class="exp-title">AI Engineering Intern</h3>
+        <div class="exp-panels reveal">
+
+          <div class="exp-panel active" id="ep-0">
+            <div class="ep-header">
+              <div>
+                <h3 class="ep-title">Data Analytics Intern</h3>
+                <p class="ep-company">Pacific Life</p>
               </div>
-              <div class="exp-meta">
-                <span class="exp-company">Smart Circle International</span>
-                <span class="exp-date">Sep. 2025 – Present &nbsp;·&nbsp; Newport Beach, CA</span>
+              <div class="ep-meta">
+                <span>Newport Beach, CA</span>
+                <span>June – Sep. 2026</span>
+                <span class="ep-badge">Incoming</span>
               </div>
             </div>
-            <ul class="exp-bullets">
+            <p class="ep-empty">Starting Summer 2026.</p>
+          </div>
+
+          <div class="exp-panel" id="ep-1">
+            <div class="ep-header">
+              <div>
+                <h3 class="ep-title">AI Engineering Intern</h3>
+                <p class="ep-company">Smart Circle International</p>
+              </div>
+              <div class="ep-meta">
+                <span>Newport Beach, CA</span>
+                <span>Sep. 2025 – Present</span>
+              </div>
+            </div>
+            <ul class="ep-bullets">
               <li>Built a Snowflake LLM agent to assist sales teams with territory reporting and zip code-level lead replacement recommendations.</li>
               <li>Developed a Python pipeline to extract and structure knowledge from SCORM packages across 10+ content formats.</li>
               <li>Benchmarked 5+ LLMs on accuracy, latency, and cost to guide model selection for internal AI adoption.</li>
             </ul>
           </div>
-        </div>
 
-        <div class="exp-item reveal">
-          <div class="exp-index">03</div>
-          <div class="exp-content">
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <h3 class="exp-title">Quantitative Research Assistant</h3>
+          <div class="exp-panel" id="ep-2">
+            <div class="ep-header">
+              <div>
+                <h3 class="ep-title">Quantitative Research Assistant</h3>
+                <p class="ep-company">UCLA Mathematical &amp; Statistical Finance Group</p>
               </div>
-              <div class="exp-meta">
-                <span class="exp-company">UCLA Mathematical &amp; Statistical Finance Group</span>
-                <span class="exp-date">June 2025 – Present &nbsp;·&nbsp; Los Angeles, CA</span>
+              <div class="ep-meta">
+                <span>Los Angeles, CA</span>
+                <span>June 2025 – Present</span>
               </div>
             </div>
-            <ul class="exp-bullets">
+            <ul class="ep-bullets">
               <li>Conducted ML and quantitative finance research under Prof. Mihai Cucuringu.</li>
               <li>Forecasted volume surprise dispersion across ~4k stocks; OLS attained R² = 0.84 OOS, outperforming nonlinear alternatives.</li>
               <li>Built a market-neutral long-short equity strategy using volume dispersion over a multi-decade backtest (2000–2024).</li>
               <li>Designed configurable strategy evaluation pipeline; accelerated backtesting 4× via vectorized NumPy and 5D PnL tensor.</li>
             </ul>
           </div>
-        </div>
 
-        <div class="exp-item reveal">
-          <div class="exp-index">04</div>
-          <div class="exp-content">
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <h3 class="exp-title">Analytics Intern</h3>
+          <div class="exp-panel" id="ep-3">
+            <div class="ep-header">
+              <div>
+                <h3 class="ep-title">Analytics Intern</h3>
+                <p class="ep-company">Smart Circle International</p>
               </div>
-              <div class="exp-meta">
-                <span class="exp-company">Smart Circle International</span>
-                <span class="exp-date">June – Sep. 2025 &nbsp;·&nbsp; Newport Beach, CA</span>
+              <div class="ep-meta">
+                <span>Newport Beach, CA</span>
+                <span>June – Sep. 2025</span>
               </div>
             </div>
-            <ul class="exp-bullets">
+            <ul class="ep-bullets">
               <li>Built Python churn prediction models (Random Forest &amp; Logistic Regression), achieving 50%+ recall with 85%+ accuracy.</li>
               <li>Synthesized 100K+ dispositions into a weekly Tableau report highlighting sales efficiency by office owner.</li>
               <li>Created an Excel report with individualized feedback to evaluate AI recruiting across 100+ sales offices.</li>
               <li>Prototyped a Python pipeline using the Google Places API to map B2B leads as a lower-cost alternative to purchased lists.</li>
             </ul>
           </div>
-        </div>
 
-        <div class="exp-item reveal">
-          <div class="exp-index">05</div>
-          <div class="exp-content">
-            <div class="exp-header">
-              <div class="exp-title-block">
-                <h3 class="exp-title">Tennis Data &amp; Scouting Analyst</h3>
+          <div class="exp-panel" id="ep-4">
+            <div class="ep-header">
+              <div>
+                <h3 class="ep-title">Tennis Data &amp; Scouting Analyst</h3>
+                <p class="ep-company">Bruin Tennis Consulting</p>
               </div>
-              <div class="exp-meta">
-                <span class="exp-company">Bruin Tennis Consulting</span>
-                <span class="exp-date">Oct. 2024 – Present &nbsp;·&nbsp; Los Angeles, CA</span>
+              <div class="ep-meta">
+                <span>Los Angeles, CA</span>
+                <span>Oct. 2024 – Present</span>
               </div>
             </div>
-            <ul class="exp-bullets">
+            <ul class="ep-bullets">
               <li>Built a transformer model to predict shot type and court location from sequential rally data using PyTorch.</li>
               <li>Created 20+ visualizations of serving tendencies used by the UCLA D1 Men's Tennis Team to adjust pre-match strategy.</li>
               <li>Piloted an end-to-end workflow from match footage to visualizations and helped teammates adopt the process.</li>
             </ul>
           </div>
-        </div>
 
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ── PROJECTS ──────────────────────────────────────────────── -->
   <section id="projects" class="section">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-layout">
+      <div class="s-head">
+        <span class="s-num">03</span>
+        <h2 class="s-title">Projects</h2>
+      </div>
+      <div class="proj-list">
 
-        <div class="project-featured reveal">
-          <div class="pf-eyebrow">
-            <span class="pf-num">01</span>
-            <div class="pf-tags">
-              <span class="tag">Python</span><span class="tag">hmmlearn</span><span class="tag">NumPy</span><span class="tag">Scikit-Learn</span>
+        <div class="proj-row reveal">
+          <div class="pr-left">
+            <span class="pr-num">01</span>
+            <div class="pr-tags">
+              <span class="tag">Python</span>
+              <span class="tag">hmmlearn</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Scikit-Learn</span>
             </div>
           </div>
-          <h3 class="pf-name">NBA Timeout Optimization<br>via Hidden Markov Models</h3>
-          <p class="pf-desc">Fit a 3-state HMM on 250K+ NBA possessions to infer latent momentum regimes from sequential scoring data. Applied within-team covariate matching across 12,000+ pairs to isolate causal timeout impact from team quality. Found timeouts are most effective after 1 opponent score (+0.031/possession), with peak impact in Q4 down 6–10 (+0.14/possession).</p>
+          <div class="pr-right">
+            <h3 class="pr-name">NBA Timeout Optimization<br>via Hidden Markov Models</h3>
+            <p class="pr-desc">Fit a 3-state HMM on 250K+ NBA possessions to infer latent momentum regimes from sequential scoring data. Applied within-team covariate matching across 12,000+ pairs to isolate causal timeout impact from team quality. Found timeouts are most effective after 1 opponent score (+0.031/possession), with peak impact in Q4 down 6–10 (+0.14/possession).</p>
+          </div>
         </div>
 
-        <div class="projects-sub reveal">
-
-          <div class="project-card">
-            <div class="pc-num">02</div>
-            <div class="pc-tags">
-              <span class="tag">PyTorch</span><span class="tag">NumPy</span><span class="tag">SciPy</span>
+        <div class="proj-row reveal">
+          <div class="pr-left">
+            <span class="pr-num">02</span>
+            <div class="pr-tags">
+              <span class="tag">PyTorch</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">SciPy</span>
             </div>
-            <h3 class="pc-name">EEG Motor Imagery Classification</h3>
-            <p class="pc-desc">Built a data pipeline to resample, bandpass filter, and normalize noisy 22-channel EEG signals across 9 subjects. Benchmarked five architectures (CNN, LSTM, GRU, TCN, Transformer) under a 36-fold leave-one-subject-out protocol. Showed compact 4K-parameter models generalize better than 200K-parameter alternatives in cross-subject evaluation.</p>
           </div>
-
-          <div class="project-card">
-            <div class="pc-num">03</div>
-            <div class="pc-tags">
-              <span class="tag">MongoDB</span><span class="tag">Express</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Gemini API</span>
-            </div>
-            <h3 class="pc-name">AI Course Insights</h3>
-            <p class="pc-desc">Full-stack web app that analyzes student assignments and extracts performance insights using the Gemini API. Engineered a data pipeline to process uploaded documents and generate structured feedback on academic trends. Built an interactive dashboard to help students track progress and identify areas for improvement.</p>
+          <div class="pr-right">
+            <h3 class="pr-name">EEG Motor Imagery<br>Classification</h3>
+            <p class="pr-desc">Built a data pipeline to resample, bandpass filter, and normalize noisy 22-channel EEG signals across 9 subjects. Benchmarked five architectures (CNN, LSTM, GRU, TCN, Transformer) under a 36-fold leave-one-subject-out protocol. Showed compact 4K-parameter models generalize better than 200K-parameter alternatives in cross-subject evaluation.</p>
           </div>
-
         </div>
+
+        <div class="proj-row reveal">
+          <div class="pr-left">
+            <span class="pr-num">03</span>
+            <div class="pr-tags">
+              <span class="tag">MongoDB</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Gemini API</span>
+            </div>
+          </div>
+          <div class="pr-right">
+            <h3 class="pr-name">AI Course Insights</h3>
+            <p class="pr-desc">Full-stack web app that analyzes student assignments and extracts performance insights using the Gemini API. Engineered a data pipeline to process uploaded documents and generate structured feedback on academic trends. Built an interactive dashboard to help students track progress and identify areas for improvement.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- ── SKILLS ────────────────────────────────────────────────── -->
   <section id="skills" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
+      <div class="s-head">
+        <span class="s-num">04</span>
+        <h2 class="s-title">Skills</h2>
+      </div>
       <div class="skills-table">
-
-        <div class="skills-row reveal">
-          <span class="skills-label">Languages</span>
-          <div class="skills-items">
+        <div class="sk-row reveal">
+          <span class="sk-label">Languages</span>
+          <div class="sk-items">
             <span>Python</span><span>C++</span><span>Java</span><span>C</span><span>SQL</span><span>R</span><span>JavaScript</span><span>HTML/CSS</span><span>LaTeX</span>
           </div>
         </div>
-
-        <div class="skills-row reveal">
-          <span class="skills-label">ML &amp; Data</span>
-          <div class="skills-items">
+        <div class="sk-row reveal">
+          <span class="sk-label">ML &amp; Data</span>
+          <div class="sk-items">
             <span>NumPy</span><span>pandas</span><span>Scikit-Learn</span><span>PyTorch</span><span>SciPy</span><span>hmmlearn</span><span>Optuna</span><span>LightGBM</span><span>XGBoost</span><span>Matplotlib</span><span>Seaborn</span>
           </div>
         </div>
-
-        <div class="skills-row reveal">
-          <span class="skills-label">Tools</span>
-          <div class="skills-items">
+        <div class="sk-row reveal">
+          <span class="sk-label">Tools</span>
+          <div class="sk-items">
             <span>Tableau</span><span>Excel</span><span>Git</span><span>Linux</span><span>JupyterLab</span><span>Google Cloud</span><span>Node.js</span><span>Snowflake</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- ── EDUCATION ─────────────────────────────────────────────── -->
   <section id="education" class="section">
     <div class="container">
-      <h2 class="section-title">Education</h2>
+      <div class="s-head">
+        <span class="s-num">05</span>
+        <h2 class="s-title">Education</h2>
+      </div>
       <div class="edu-card reveal">
-        <div class="edu-logo">UCLA</div>
+        <div class="edu-badge">UCLA</div>
         <div class="edu-body">
           <h3 class="edu-school">University of California, Los Angeles</h3>
           <p class="edu-degree">B.S. Mathematics of Computation &nbsp;·&nbsp; Minor in Data Science Engineering</p>
           <p class="edu-date">Expected June 2027 &nbsp;·&nbsp; GPA: 3.75 / 4.00</p>
-
-          <div class="edu-groups">
-            <div class="edu-group">
-              <span class="edu-group-label">Coursework</span>
+          <div class="edu-rows">
+            <div class="edu-row">
+              <span class="edu-rl">Coursework</span>
               <div class="edu-items">
                 <span>Machine Learning</span><span>Deep Learning &amp; Neural Networks</span><span>ML for Finance (Grad)</span><span>AI for Scientific Computing (Grad)</span><span>NLP</span><span>Real Analysis</span><span>Probability</span><span>Linear Algebra</span><span>Data Structures</span><span>Algorithms</span><span>Numerical Methods</span><span>Theory of Computing</span>
               </div>
             </div>
-            <div class="edu-group">
-              <span class="edu-group-label">Honors &amp; Activities</span>
+            <div class="edu-row">
+              <span class="edu-rl">Honors</span>
               <div class="edu-items">
                 <span>Upsilon Pi Epsilon</span><span>Dean's Honors List (2×)</span><span>Eagle Scout</span><span>ACM</span><span>Poker Group</span><span>Cubing Club</span><span>Intramural Basketball</span>
               </div>
@@ -312,30 +414,32 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- ── CONTACT ───────────────────────────────────────────────── -->
   <section id="contact" class="section section-alt">
-    <div class="container contact-container">
-      <h2 class="section-title">Let's talk.</h2>
-      <p class="contact-sub">Open to opportunities, research collaborations, or a good conversation about ML and markets.</p>
-      <div class="contact-links">
-        <a href="mailto:dhruvpatel97@g.ucla.edu" class="contact-link reveal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          dhruvpatel97@g.ucla.edu
-        </a>
-        <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener" class="contact-link reveal">
+    <div class="container contact-wrap">
+      <div class="s-head">
+        <span class="s-num">06</span>
+        <h2 class="s-title">Contact</h2>
+      </div>
+      <p class="ct-sub">Open to opportunities, research collaborations, or a good conversation about ML and markets.</p>
+      <a href="mailto:dhruvpatel97@g.ucla.edu" class="ct-email">dhruvpatel97@g.ucla.edu →</a>
+      <div class="ct-links">
+        <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener" class="ct-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-          github.com/dhruvpatel-05
+          GitHub
         </a>
-        <a href="https://www.linkedin.com/in/dhruvpatel-05" target="_blank" rel="noopener" class="contact-link reveal">
+        <a href="https://www.linkedin.com/in/dhruvpatel-05" target="_blank" rel="noopener" class="ct-link">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          linkedin.com/in/dhruvpatel-05
+          LinkedIn
         </a>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>Dhruv Patel &nbsp;·&nbsp; <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener">GitHub</a></p>
+    <span>Dhruv Patel</span>
+    <span class="ft-div">·</span>
+    <a href="https://github.com/dhruvpatel-05" target="_blank" rel="noopener">dhruvpatel-05.github.io</a>
   </footer>
 
   <script src="script.js"></script>
