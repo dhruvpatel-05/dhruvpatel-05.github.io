@@ -570,6 +570,28 @@ strong { font-weight: 600; }
   max-width: 620px;
 }
 
+.pr-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 620px;
+}
+.pr-bullets li {
+  font-size: 0.925rem;
+  color: var(--muted);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.7;
+}
+.pr-bullets li::before {
+  content: '/';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
 /* ── Skills ──────────────────────────────────────────────────────────────── */
 .skills-table { border-top: 1px solid var(--border); }
 .sk-row {
