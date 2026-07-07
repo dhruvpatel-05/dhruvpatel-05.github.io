@@ -198,7 +198,7 @@
             </div>
             <ul class="ep-bullets">
               <li>Researching ML and AI applications in quantitative finance under Prof. Mihai Cucuringu</li>
-              <li>Forecasted volume surprise dispersion across ~4k stocks; OLS attained R² = 0.84 OOS, outperforming nonlinear alternatives</li>
+              <li>Forecasted dispersion of volume surprise across ~4k stocks; HAR OLS cut OOS forecast error 18% vs AR(1) baseline</li>
               <li>Built a market-neutral long-short equity strategy using volume dispersion; achieved 2.81 Sharpe over a 25-year backtest (2000–2024)</li>
               <li>Designed a configurable strategy backtesting pipeline; achieved 4× speedup via vectorized NumPy operations and a 5D PnL tensor</li>
             </ul>
@@ -287,9 +287,9 @@
           <div class="pr-right">
             <h3 class="pr-name">LOBSTER News<br>Alpha Agent</h3>
             <ul class="pr-bullets">
-              <li>Built an LLM agent fusing news sentiment with limit-order-book order flow for intraday trade signals on 10 NASDAQ names</li>
-              <li>Ran contamination-controlled eval (post-cutoff window, 2,879 events) with Benjamini-Hochberg FDR and bootstrap-CI inference</li>
-              <li>Found agent beats lexicon on inference-heavy headlines: TSLA sector IC +0.284 (p&lt;0.001, n=79), the one result surviving FDR</li>
+              <li>Built an LLM agent combining news sentiment with limit-order-book order flow for intraday signals on 10 NASDAQ names</li>
+              <li>Ran contamination-controlled evaluation (post-cutoff window, 2,879 events) with Benjamini-Hochberg FDR and bootstrap CIs</li>
+              <li>Identified one subgroup surviving FDR: agent beat lexicon baseline on inference-heavy TSLA headlines (IC +0.28, p&lt;0.001)</li>
             </ul>
           </div>
         </div>
@@ -308,8 +308,8 @@
             <h3 class="pr-name">NBA Timeout Optimization<br>via Hidden Markov Models</h3>
             <ul class="pr-bullets">
               <li>Fit a 3-state HMM on 250K+ NBA possessions to infer latent momentum regimes from sequential scoring data</li>
-              <li>Applied within-team covariate matching across 12,000+ pairs to isolate causal timeout impact from team quality</li>
-              <li>Found timeouts are more effective after 1 opponent score (+0.031/possession), with peak impact in Q4 down 6–10 (+0.14/possession)</li>
+              <li>Applied within-team covariate matching across 12K+ pairs to estimate timeout effects net of team quality</li>
+              <li>Found timeout impact peaks in Q4 when trailing 6–10 points (+0.14 points/possession)</li>
             </ul>
           </div>
         </div>
