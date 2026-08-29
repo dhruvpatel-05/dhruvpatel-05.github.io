@@ -103,7 +103,7 @@
           <div class="sf-block">
             <span class="sf-key">Now</span>
             <span>Quant Research @ UCLA</span>
-            <span>Analytics @ Pacific Life</span>
+            <span>Data Science @ Pacific Life</span>
           </div>
           <div class="sf-block">
             <span class="sf-key">Studying</span>
@@ -129,7 +129,7 @@
             <span class="et-num">01</span>
             <span class="et-body">
               <span class="et-co">Pacific Life</span>
-              <span class="et-role">Data Analytics</span>
+              <span class="et-role">Data Science</span>
             </span>
           </button>
 
@@ -172,7 +172,7 @@
           <div class="exp-panel active" id="ep-0">
             <div class="ep-header">
               <div>
-                <h3 class="ep-title">Data Analytics Intern</h3>
+                <h3 class="ep-title">Data Science Intern</h3>
                 <p class="ep-company">Pacific Life</p>
               </div>
               <div class="ep-meta">
@@ -181,8 +181,10 @@
               </div>
             </div>
             <ul class="ep-bullets">
-              <li>Building a Python pipeline to extract relevant info from medical records, match underwriting guidelines, and classify risk via LLM</li>
-              <li>Validating low-risk classifications against the production regression model to reduce forensic underwriter caseload</li>
+              <li>Implemented a Cortex Search Service to filter medical records down to only the information relevant to underwriting guidelines</li>
+              <li>Compared filtered records to applicant answers via LLM, projected to cut caseload ~10% by skipping review of no-discrepancy cases</li>
+              <li>Looped an agent through the detection system, tuning a YAML search space until false omission rate hits target (5-loop max)</li>
+              <li>Developed an ADO pipeline pulling per-user Snowflake spend and triggering AWS SNS email alerts on threshold breaches</li>
             </ul>
           </div>
 
@@ -289,7 +291,7 @@
             <h3 class="pr-name">LOBSTER News<br>Alpha Agent</h3>
             <ul class="pr-bullets">
               <li>Built an LLM agent combining news sentiment with limit-order-book order flow for intraday signals on 10 NASDAQ names</li>
-              <li>Ran contamination-controlled evaluation (post-cutoff window, 2,879 events) with Benjamini-Hochberg FDR and bootstrap CIs</li>
+              <li>Controlled for data contamination via anonymization placebo test; applied BH-FDR and bootstrap CIs across 2,879 events</li>
               <li>Identified one subgroup surviving FDR: agent beat lexicon baseline on inference-heavy TSLA headlines (IC +0.28, p&lt;0.001)</li>
             </ul>
           </div>
