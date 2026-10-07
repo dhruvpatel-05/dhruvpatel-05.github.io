@@ -47,7 +47,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="/assets/DhruvPatel-Resume.pdf?v=13" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="/assets/DhruvPatel-Resume.pdf?v=14" target="_blank" rel="noopener">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -74,7 +74,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="/assets/DhruvPatel-Resume.pdf?v=13" target="_blank" rel="noopener" class="btn btn-ghost">
+        <a href="/assets/DhruvPatel-Resume.pdf?v=14" target="_blank" rel="noopener" class="btn btn-ghost">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Resume
         </a>
@@ -151,14 +151,6 @@
           <button class="exp-tab" data-idx="3" role="tab">
             <span class="et-num">04</span>
             <span class="et-body">
-              <span class="et-co">Smart Circle</span>
-              <span class="et-role">Analytics</span>
-            </span>
-          </button>
-
-          <button class="exp-tab" data-idx="4" role="tab">
-            <span class="et-num">05</span>
-            <span class="et-body">
               <span class="et-co">Bruin Tennis</span>
               <span class="et-role">Data & Scouting</span>
             </span>
@@ -181,9 +173,9 @@
             </div>
             <ul class="ep-bullets">
               <li>Researching ML and AI applications in quantitative finance under Prof. Mihai Cucuringu</li>
-              <li>Forecasted daily volume dispersion over a ~4k stock universe (2000–2024); HAR-based model cut MSE by 28.5% vs AR(1) baseline</li>
-              <li>Devised a market-neutral long-short equity strategy using volume dispersion forecasts; 1.5+ Sharpe over 8-year OOS backtest</li>
-              <li>Designed a configurable strategy backtesting pipeline, reaching 4× speedup via vectorized NumPy operations and 5D PnL tensor</li>
+              <li>Forecasted daily volume dispersion across ~4k stocks (2000–2024); HAR-based model cut MSE by 28.5% vs AR(1) baseline</li>
+              <li>Devised a market-neutral long-short equity strategy from volume dispersion forecasts; 1.5+ Sharpe in 8-year OOS backtest</li>
+              <li>Designed a configurable backtesting pipeline, reaching 4× speedup via vectorized NumPy operations and a 5D PnL tensor</li>
             </ul>
           </div>
 
@@ -199,9 +191,9 @@
               </div>
             </div>
             <ul class="ep-bullets">
-              <li>Implemented a Cortex Search Service to filter medical records down to only the information relevant to underwriting guidelines</li>
-              <li>Flagged discrepancies between filtered records and applicant answers via LLM, projected to cut underwriter caseload by ~10%</li>
-              <li>Built an LLM agent that tunes this workflow's prompt, model type, and similarity threshold to optimize false omission rate</li>
+              <li>Implemented a Cortex Search Service to filter medical records down to information relevant to underwriting guidelines</li>
+              <li>Added an LLM stage to flag discrepancies between records and applicant answers, projected to cut underwriter caseload ~10%</li>
+              <li>Set up an agent loop to tune this workflow's prompt, model, and similarity threshold to minimize false omission rate</li>
               <li>Deployed an Azure DevOps pipeline pulling per-user Snowflake spend, sending AWS SNS alerts when daily spend exceeds $50</li>
             </ul>
           </div>
@@ -214,35 +206,19 @@
               </div>
               <div class="ep-meta">
                 <span>Newport Beach, CA</span>
-                <span>Sep. 2025 – Jun. 2026</span>
+                <span>June 2025 – Jun. 2026</span>
               </div>
             </div>
             <ul class="ep-bullets">
-              <li>Developed a Snowflake Cortex LLM agent for D2D sales territory reporting and zip code-level lead replacement recommendations</li>
-              <li>Engineered a Python pipeline to parse and structure SCORM e-learning content across 10+ formats for AI training workflows</li>
-              <li>Aggregated 15+ campaign documents across formats and structures into a centralized knowledge base for LLM ingestion</li>
-            </ul>
-          </div>
-
-          <div class="exp-panel" id="ep-3">
-            <div class="ep-header">
-              <div>
-                <h3 class="ep-title">Analytics Intern</h3>
-                <p class="ep-company">Smart Circle International</p>
-              </div>
-              <div class="ep-meta">
-                <span>Newport Beach, CA</span>
-                <span>June – Sep. 2025</span>
-              </div>
-            </div>
-            <ul class="ep-bullets">
-              <li>Trained Python churn prediction models (Random Forest &amp; Logistic Regression), achieved 50%+ recall with 85%+ accuracy</li>
-              <li>Synthesized 100K+ dispositions into a weekly Tableau report on sales efficiency by office; adopted across 15+ sales campaigns</li>
+              <li>Trained Python churn prediction models for AT&amp;T (Random Forest &amp; Logistic Regression), 50%+ recall at 85%+ accuracy</li>
+              <li>Synthesized 100K+ dispositions into a weekly Tableau sales-efficiency report for Lumen, then adopted across 15+ campaigns</li>
+              <li>Engineered a Python pipeline to parse and structure SCORM e-learning content across 10+ formats for AI workflows</li>
+              <li>Prototyped a Snowflake Cortex chatbot for AT&amp;T territory reporting and zip code-level lead replacement recommendations</li>
               <li>Defined office-level metrics evaluating AI-driven recruiting; informed funding allocation decisions across 100+ offices</li>
             </ul>
           </div>
 
-          <div class="exp-panel" id="ep-4">
+          <div class="exp-panel" id="ep-3">
             <div class="ep-header">
               <div>
                 <h3 class="ep-title">Tennis Data &amp; Scouting Analyst</h3>
@@ -288,7 +264,7 @@
           <div class="pr-right">
             <h3 class="pr-name">LOBSTER News<br>Alpha Agent</h3>
             <ul class="pr-bullets">
-              <li>Created an LLM agent combining news sentiment with limit-order-book flow for intraday signals across 2,879 events</li>
+              <li>Created an LLM agent that turns headlines and limit-order-book flow into trade decisions across 2,879 events</li>
               <li>Beat lexicon baseline on inference-heavy TSLA headlines (IC +0.28, p&lt;0.001), the only subgroup surviving BH-FDR</li>
             </ul>
           </div>
@@ -358,7 +334,7 @@
         <div class="sk-row reveal">
           <span class="sk-label">Tools</span>
           <div class="sk-items">
-            <span>Snowflake</span><span>Azure DevOps</span><span>AWS</span><span>Docker</span><span>Git</span><span>Linux</span><span>JupyterLab</span><span>Tableau</span><span>Excel</span><span>Google Cloud</span>
+            <span>Snowflake</span><span>Azure DevOps</span><span>AWS</span><span>Docker</span><span>Git</span><span>Linux</span><span>JupyterLab</span><span>Tableau</span><span>Excel</span><span>Google Cloud Platform</span>
           </div>
         </div>
       </div>
@@ -415,7 +391,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="/assets/DhruvPatel-Resume.pdf?v=13" target="_blank" rel="noopener" class="ct-link">
+        <a href="/assets/DhruvPatel-Resume.pdf?v=14" target="_blank" rel="noopener" class="ct-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Resume
         </a>
