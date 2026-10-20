@@ -564,6 +564,16 @@ strong { font-weight: 600; }
   line-height: 1.2;
   margin-bottom: 0.85rem;
 }
+.pr-name a { transition: color var(--t); }
+.pr-name a:hover { color: var(--accent); }
+
+.inline-link {
+  color: var(--text);
+  border-bottom: 1px solid rgba(249,115,22,0.4);
+  transition: color var(--t), border-color var(--t);
+}
+.inline-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
 .pr-desc {
   font-size: 0.925rem;
   color: var(--muted);
