@@ -55,7 +55,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="/assets/DhruvPatel-Resume.pdf?v=16" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="/assets/DhruvPatel-Resume.pdf?v=17" target="_blank" rel="noopener">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -82,7 +82,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="/assets/DhruvPatel-Resume.pdf?v=16" target="_blank" rel="noopener" class="btn btn-ghost">
+        <a href="/assets/DhruvPatel-Resume.pdf?v=17" target="_blank" rel="noopener" class="btn btn-ghost">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Resume
         </a>
@@ -220,7 +220,7 @@
             <ul class="ep-bullets">
               <li>Built and tested AT&amp;T churn models (Random Forest, Logistic Regression), reaching 50%+ recall at 85%+ accuracy</li>
               <li>Turned 100K+ sales dispositions into a weekly Tableau efficiency report for Lumen, later adopted across 15+ campaigns</li>
-              <li>Engineered a Python pipeline parsing SCORM e-learning content across 10+ formats into structured data for AI workflows</li>
+              <li>Engineered a Python pipeline parsing 10+ file types from e-learning courses into structured data for AI workflows</li>
               <li>Created a Snowflake Cortex chatbot for AT&amp;T territory reporting and zip code-level lead replacement recommendations</li>
               <li>Defined office-level metrics to evaluate AI-driven recruiting, informing funding allocation across 100+ offices</li>
             </ul>
@@ -272,7 +272,7 @@
           <div class="pr-right">
             <h3 class="pr-name"><a href="https://github.com/dhruvpatel-05/LNA-agent" target="_blank" rel="noopener">LOBSTER News<br>Alpha Agent</a></h3>
             <ul class="pr-bullets">
-              <li>Designed an LLM agent that turns news headlines and limit order book flow into trade decisions across 2,879 events</li>
+              <li>Designed an LLM agent that turns news headlines and limit order book flow into trade decisions across ~3K events</li>
               <li>Beat a lexicon baseline on inference-heavy TSLA headlines (IC +0.28, p &lt; 0.001), the only subgroup surviving BH-FDR</li>
             </ul>
           </div>
@@ -285,14 +285,13 @@
               <span class="tag">Python</span>
               <span class="tag">PyTorch</span>
               <span class="tag">SciPy</span>
-              <span class="tag">Sentence Transformers</span>
             </div>
           </div>
           <div class="pr-right">
             <h3 class="pr-name"><a href="https://github.com/dhruvpatel-05/icon-lm-pde" target="_blank" rel="noopener">In-Context Operator Networks<br>for Solving PDEs</a></h3>
             <ul class="pr-bullets">
-              <li>Trained a 2.21M-parameter transformer that solves 1D viscous Burgers from in-context examples, based on ICON-LM</li>
-              <li>Cut held-out error from 22% to 15% with 3 prompt examples; text captions alone cut zero-shot error up to 27%</li>
+              <li>Trained a 2.21M-param transformer to solve the 1D Burgers PDE in context, cutting error from 22% to 15% with 3 examples</li>
+              <li>Added text captions describing the viscosity, lowering zero-shot error by up to 27%</li>
             </ul>
           </div>
         </div>
@@ -311,8 +310,8 @@
           <div class="pr-right">
             <h3 class="pr-name"><a href="https://github.com/dhruvpatel-05/eeg-motor-imagery-classification" target="_blank" rel="noopener">EEG Motor Imagery<br>Classification</a></h3>
             <ul class="pr-bullets">
-              <li>Compared 5 architectures (EEGNet, TCN, CNN+LSTM, CNN+GRU, Transformer) with 36-fold leave-one-subject-out CV</li>
-              <li>Showed compact models (&lt;4K params) generalize best: TCN hit 45.2% cross-subject accuracy vs 41.1% for a 200K-param LSTM</li>
+              <li>Compared 5 deep learning models classifying imagined movements from EEG under leave-one-subject-out evaluation</li>
+              <li>Showed a ~4K-param TCN generalizes best to unseen subjects, beating models up to 50× larger</li>
             </ul>
           </div>
         </div>
@@ -351,8 +350,8 @@
           <div class="pr-right">
             <h3 class="pr-name"><a href="https://github.com/dhruvpatel-05/nba-timeout-optimization" target="_blank" rel="noopener">NBA Timeout<br>Optimization</a></h3>
             <ul class="pr-bullets">
-              <li>Fit a 3-state Hidden Markov Model on 250K+ NBA possessions to infer latent momentum regimes from scoring sequences</li>
-              <li>Found timeouts help most in Q4 when trailing by 6–10 (+0.14 points/possession) across 12K+ within-team matched pairs</li>
+              <li>Fit a 3-state Hidden Markov Model on 250K+ NBA possessions to detect momentum swings from scoring sequences</li>
+              <li>Paired 12K+ timeouts with similar no-timeout possessions; timeouts helped most down 6–10 in Q4 (+0.14 pts/possession)</li>
             </ul>
           </div>
         </div>
@@ -447,7 +446,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn
         </a>
-        <a href="/assets/DhruvPatel-Resume.pdf?v=16" target="_blank" rel="noopener" class="ct-link">
+        <a href="/assets/DhruvPatel-Resume.pdf?v=17" target="_blank" rel="noopener" class="ct-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
           Resume
         </a>
